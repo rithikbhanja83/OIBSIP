@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soul Fitness</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">SOUL FITNESS</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Build Strength, Gain Confidence</h2>
+      <p>Your transformation starts today with Soul Fitness.</p>
+      <a href="#contact" class="btn">Join Now</a>
+    </div>
+  </section>
+
+  <section id="about" class="section about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>Welcome to Soul Fitness, where transformation begins. We are more than just a gym — we're a community driven by passion, discipline, and the desire to help you become the best version of yourself. Whether you're a beginner or a seasoned athlete, our modern equipment, experienced trainers, and motivating environment are designed to support every step of your fitness journey.
+
+At Soul Fitness, we believe fitness is not just about lifting weights — it's about lifting your spirit, boosting your confidence, and building a healthy lifestyle. With personalized workout plans, group classes, and wellness programs, we ensure that your goals are not just dreams, but milestones waiting to be achieved.
+
+Join us today and experience the power of a healthier, stronger, and more energetic you!</p>
+<div class="about-logo">
+  <img src="images.jpg" alt="Soul Fitness Logo">
+</div>
+
+  </section>
+
+  <section id="services" class="section services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Personal Training</h3>
+          <p>One-on-one sessions tailored to your goals.</p>
+        </div>
+        <div class="card">
+          <h3>Group Workouts</h3>
+          <p>Motivating group classes including HIIT, yoga, and more.</p>
+        </div>
+        <div class="card">
+          <h3>Nutrition Guidance</h3>
+          <p>Custom meal plans to support your transformation.</p>
+        </div>
+      </div>
+    </div>
+    <div class="pricing">
+  <h3>Choose Your Plan</h3>
+  <div class="pricing-buttons">
+    <button onclick="showPrice('monthly')">Monthly</button>
+    <button onclick="showPrice('quarterly')">Quarterly</button>
+    <button onclick="showPrice('yearly')">Yearly</button>
+  </div>
+
+  <div class="price-box" id="monthly">
+    <p><strong>Monthly Plan:</strong> ₹1000</p>
+  </div>
+  <div class="price-box" id="quarterly">
+    <p><strong>Quarterly Plan:</strong> ₹5500</p>
+  </div>
+  <div class="price-box" id="yearly">
+    <p><strong>Yearly Plan:</strong> ₹10000</p>
+  </div>
+</div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Email: soulfitness@gmail.com | Phone: +91 84570 71057</p>
+      <a href="mailto:soulfitness@gmail.com" class="btn">Email Us</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Soul Fitness. All rights reserved.</p>
+  </footer>
+
+  <script>
+  function showPrice(plan) {
+    const allBoxes = document.querySelectorAll('.price-box');
+    allBoxes.forEach(box => {
+      box.style.display = 'none';
+      box.style.opacity = 0;
+    });
+
+    const activeBox = document.getElementById(plan);
+    activeBox.style.display = 'block';
+    setTimeout(() => {
+      activeBox.style.opacity = 1;
+    }, 50);
+  }
+</script>
+
+</body>
+</html>
